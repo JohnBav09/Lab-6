@@ -97,14 +97,14 @@ Salmon_cookies.prototype.render = function () {
 }
 
 //instantiating area
-var pike_store = new Salmon_cookies('Salmon Cookies - Pike Place', 'Pike Place Market', 23, 65, '6AM', '8PM', 6.3);
-var seatac_store = new Salmon_cookies('Salmon Cookies - Seatac Airport', 'Seatac Airport', 3, 24, '6AM', '8PM', 1.2);
-var seattle_center_store = new Salmon_cookies('Salmon Cookies - Seattle Center', 'Seattle, Center', 11, 38, '6 AM', '8AM', 3.7);
-var cap_hill_store = new Salmon_cookies('Salmon Cookies - Capitol Hill', 'Capitol Hill', 20, 38, '6AM', '8AM', 2.3);
-var alki_store = new Salmon_cookies('Salmon Cookies - Alki', 'Alki Beach', 2, 16, '6AM', '8PM', 4.6);
+var pike = new Salmon_cookies('Pike Place', 'Pike Place Market', 23, 65, '6AM', '8PM', 6.3);
+var stap = new Salmon_cookies( 'Seatac', 'Seatac Airport', 3, 24, '6AM', '8PM', 1.2);
+var scenter_store = new Salmon_cookies('Seattle Center', 'Seattle, Center', 11, 38, '6 AM', '8AM', 3.7);
+var caphill = new Salmon_cookies('Capitol Hill', 'Capitol Hill', 20, 38, '6AM', '8AM', 2.3);
+var alki = new Salmon_cookies('Alki', 'Alki Beach', 2, 16, '6AM', '8PM', 4.6);
 
 
-var all_stores = [pike_store, seatac_store, seattle_center_store, cap_hill_store, alki_store];
+var all_stores = [pike, stap, scenter, caphill, alki];
 
 for (var i = 0; i < all_stores.length; i++) {
     all_stores[i].render_as_a_table_row();
