@@ -1,13 +1,13 @@
 'use strict';
 
-var Salmon_cookies = function (store_name, location, min_cust, max_cust, store_open, store_close, cookie_order_size, avg_cookies_per_cust){
+var Salmon_cookies = function (store_name, location, min_cust, max_cust, store_open, store_close, cookie_order_size, avg_cookies_per_cust) {
     this.store_name = store_name;
     this.store_type = 'Salmon Cookies';
     this.location = location;
     this.min_cust = min_cust;
     this.max_cust = max_cust;
     this.open_hour = store_open;
-    this.close_hour =store_close;
+    this.close_hour = store_close;
     this.cookie_order_size = cookie_order_size;
     this.cookies_sold_each_hour = [];
     this.avg_cookies_per_cust = avg_cookies_per_cust || 6.3;
@@ -50,7 +50,7 @@ var render_one_stores_table = function () {
 
 Salmon_cookies.prototype.render_as_a_table_row = render_one_stores_table;
 
-Salmon_cookies.prototype.render = function (){
+Salmon_cookies.prototype.render = function () {
     this.calculate_cookies_sold_each_hour();
 
     var target = document.getElementById('store-table');
@@ -70,11 +70,11 @@ Salmon_cookies.prototype.render = function (){
     tr_el.appendChild(td_el);
 
     td_el = document.createElement('td');
-    td_el.textContent = this. min_cust;
+    td_el.textContent = this.min_cust;
     tr_el.appendChild(td_el);
 
     td_el = document.createElement('td');
-    td_el.textContent = this. max_cust;
+    td_el.textContent = this.max_cust;
     tr_el.appendChild(td_el);
 
     td_el = document.createElement('td');
@@ -85,7 +85,7 @@ Salmon_cookies.prototype.render = function (){
     td_el.textContent = this.close_hour;
     tr_el.appendChild(td_el);
 
-    for(var i = 0; i < this.cookies_sold_each_hour.length; i++){
+    for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
         td_el = document.createElement('td');
         td_el.textContent = this.cookies_sold_each_hour[i];
         tr_el.appendChild(td_el);
@@ -106,6 +106,6 @@ var alki_store = new Salmon_cookies('Salmon Cookies - Alki', 'Alki Beach', 2, 16
 
 var all_stores = [pike_store, seatac_store, seattle_center_store, cap_hill_store, alki_store];
 
-for(var i = 0; i < all_stores.length; i++){
+for (var i = 0; i < all_stores.length; i++) {
     all_stores[i].render_as_a_table_row();
 }
