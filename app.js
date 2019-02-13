@@ -1,5 +1,4 @@
 'use strict'
-// helper functions
 
 var _random = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);

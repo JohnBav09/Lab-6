@@ -1,8 +1,7 @@
-p {
-    Color: rgb(85, 41, 85);
-    font-size: 24px
+table {
+    padding: .3ema
+    
 }
-
- body {
-    background: green
+td {
+    padding: .2em
 }
