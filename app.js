@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 var _random = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
-}
+};
 
 var alki = {
   min_cust: 2,
@@ -12,7 +12,7 @@ var alki = {
   store_open: 6,
   store_close: 20,
   cookies_sold_each_hour: []
-}
+};
 
 alki.cookies_per_hour = function () {
   var random_customers = Math.floor(_random(this.min_cust, this.max_cust));
@@ -22,13 +22,13 @@ alki.cookies_per_hour = function () {
 alki.calculate_cookies_sold_each_hour = function () {
   for (var i = this.store_open; i < this.store_close; i++) {
     var cookies_sold = this.cookies_per_hour();
-    this.cookies_sold_each_hour.push(cookies_sold)
+    this.cookies_sold_each_hour.push(cookies_sold);
   }
   console.log(this);
 };
 
 alki.render = function () {
-  var target = document.getElementById('store-container')
+  var target = document.getElementById('store-container');
   var h2_el = document.createElement('h2');
   var li_el = document.createElement('li');
   var ul_el = document.createElement('ul');
@@ -36,8 +36,8 @@ alki.render = function () {
   h2_el.textContent = this.store_name;
 
   for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
-    var hour_li_el = document.createElement('li')
-    hour_li_el.textContent = this.cookies_sold_each_hour[i]
+    var hour_li_el = document.createElement('li');
+    hour_li_el.textContent = this.cookies_sold_each_hour[i];
     ul_el.appendChild(hour_li_el);
 
   }
@@ -45,7 +45,7 @@ alki.render = function () {
   li_el.appendChild(h2_el);
   li_el.appendChild(ul_el);
   target.appendChild(li_el);
-}
+};
 
 alki.calculate_cookies_sold_each_hour();
 
@@ -57,7 +57,7 @@ var pike = {
   store_open: 6,
   store_close: 20,
   cookies_sold_each_hour: []
-}
+};
 
 pike.cookies_per_hour = function () {
   var random_customers = Math.floor(_random(this.min_cust, this.max_cust));
@@ -68,13 +68,13 @@ pike.cookies_per_hour = function () {
 pike.calculate_cookies_sold_each_hour = function () {
   for (var i = this.store_open; i < this.store_close; i++) {
     var cookies_sold = this.cookies_per_hour();
-    this.cookies_sold_each_hour.push(cookies_sold)
+    this.cookies_sold_each_hour.push(cookies_sold);
   }
   console.log(this);
 };
 
 pike.render = function () {
-  var target = document.getElementById('store-container')
+  var target = document.getElementById('store-container');
   var h2_el = document.createElement('h2');
   var li_el = document.createElement('li');
   var ul_el = document.createElement('ul');
@@ -82,16 +82,16 @@ pike.render = function () {
   h2_el.textContent = this.store_name;
 
   for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
-    var hour_li_el = document.createElement('li')
-    hour_li_el.textContent = this.cookies_sold_each_hour[i]
+    var hour_li_el = document.createElement('li');
+    hour_li_el.textContent = this.cookies_sold_each_hour[i];
     ul_el.appendChild(hour_li_el);
 
   }
 
   li_el.appendChild(h2_el);
   li_el.appendChild(ul_el);
-  target.appendChild(li_el)
-}
+  target.appendChild(li_el);
+};
 
 pike.calculate_cookies_sold_each_hour();
 
@@ -103,7 +103,7 @@ var stap = {
   store_open: 6,
   store_close: 20,
   cookies_sold_each_hour: []
-}
+};
 
 stap.cookies_per_hour = function () {
   var random_customers = Math.floor(_random(this.min_cust, this.max_cust));
@@ -119,7 +119,7 @@ stap.calculate_cookies_sold_each_hour = function () {
 };
 
 stap.render = function () {
-  var target = document.getElementById('store-container')
+  var target = document.getElementById('store-container');
   var h2_el = document.createElement('h2');
   var li_el = document.createElement('li');
   var ul_el = document.createElement('ul');
@@ -127,7 +127,7 @@ stap.render = function () {
   h2_el.textContent = this.store_name;
 
   for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
-    var hour_li_el = document.createElement('li')
+    var hour_li_el = document.createElement('li');
     hour_li_el.textContent = this.cookies_sold_each_hour[i];
     ul_el.appendChild(hour_li_el);
 
@@ -135,8 +135,8 @@ stap.render = function () {
 
   li_el.appendChild(h2_el);
   li_el.appendChild(ul_el);
-  target.appendChild(li_el)
-}
+  target.appendChild(li_el);
+};
 
 stap.calculate_cookies_sold_each_hour();
 
@@ -148,7 +148,7 @@ var scenter = {
   store_open: 6,
   store_close: 20,
   cookies_sold_each_hour: []
-}
+};
 
 scenter.cookies_per_hour = function () {
   var random_customers = Math.floor(_random(this.min_cust, this.max_cust));
@@ -164,7 +164,7 @@ scenter.calculate_cookies_sold_each_hour = function () {
 };
 
 scenter.render = function () {
-  var target = document.getElementById('store-container')
+  var target = document.getElementById('store-container');
   var li_el = document.createElement('li');
   var h2_el = document.createElement('h2');
   var ul_el = document.createElement('ul');
@@ -174,8 +174,8 @@ scenter.render = function () {
 
 
   for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
-    var hour_li_el = document.createElement('li')
-    hour_li_el.textContent = this.cookies_sold_each_hour[i]
+    var hour_li_el = document.createElement('li');
+    hour_li_el.textContent = this.cookies_sold_each_hour[i];
     ul_el.appendChild(hour_li_el);
 
   }
@@ -183,7 +183,7 @@ scenter.render = function () {
   li_el.appendChild(h2_el);
   li_el.appendChild(ul_el);
   target.appendChild(li_el);
-}
+};
 
 scenter.calculate_cookies_sold_each_hour();
 
@@ -195,7 +195,7 @@ var caphill = {
   store_open: 6,
   store_close: 20,
   cookies_sold_each_hour: []
-}
+};
 
 caphill.cookies_per_hour = function () {
   var random_customers = Math.floor(_random(this.min_cust, this.max_cust));
@@ -212,7 +212,7 @@ caphill.calculate_cookies_sold_each_hour = function () {
 };
 
 caphill.render = function () {
-  var target = document.getElementById('store-container')
+  var target = document.getElementById('store-container');
   var li_el = document.createElement('li');
   var h2_el = document.createElement('h2');
   var ul_el = document.createElement('ul');
@@ -220,7 +220,7 @@ caphill.render = function () {
   h2_el.textContent = this.store_name;
 
   for (var i = 0; i < this.cookies_sold_each_hour.length; i++) {
-    var hour_li_el = document.createElement('li')
+    var hour_li_el = document.createElement('li');
     hour_li_el.textContent = this.cookies_sold_each_hour[i];
     ul_el.appendChild(hour_li_el);
 
@@ -229,7 +229,7 @@ caphill.render = function () {
   li_el.appendChild(h2_el);
   li_el.appendChild(ul_el);
   target.appendChild(li_el);
-}
+};
 
 caphill.calculate_cookies_sold_each_hour();
 
@@ -242,4 +242,4 @@ stap.render();
 pike.render();
 
 alki.render();
-console.log(document)
+console.log(document);
